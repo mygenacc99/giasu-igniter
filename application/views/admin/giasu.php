@@ -35,7 +35,7 @@
             <td><?php
                 foreach ($ctgs as $ct) {
                     if ($gs->MaGiaSu === $ct->MaGiaSu) {
-                        echo $ct->MonHoc . ' Lớp  ' . $ct->Lop;
+                        echo $ct->MonHoc ;
                         echo "<br>";
                     }
                 }

@@ -5,10 +5,10 @@
                 <div class="header_bottom_border">
                     <div class="row align-items-center">
                         <?php if($this->session->userdata('user')){?>
-                            <div class="main-menu  d-none d-lg-block" style="padding-left: 80%; ">
+                            <div class="main-menu  d-none d-lg-block" style="padding-left: 0%; ">
                                 <nav>
                                     <ul id="navigation">
-                                        <li><a href="#"><?php echo $this->session->userdata('user'); ?> <i class="ti-angle-down"></i></a>a
+                                        <li><a href="#"><?php echo $this->session->userdata('user'); ?> </a>
                                             <ul class="submenu">
                                                 <li><a href="<?php echo admin_url('home')?>"><i class="fa fa-power-off fa-3x"></i> Home</a></li>
                                             </ul>
