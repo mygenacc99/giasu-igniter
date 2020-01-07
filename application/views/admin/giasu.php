@@ -33,10 +33,18 @@
             <td><?php echo $gs->GioiThieu ?></td>
             <td><?php echo $gs->NgayDangKy ?></td>
             <td><?php
+                $monhoc = null;
                 foreach ($ctgs as $ct) {
                     if ($gs->MaGiaSu === $ct->MaGiaSu) {
-                        echo $ct->MonHoc ;
-                        echo "<br>";
+                        if ($monhoc !== $ct->MonHoc) {
+                            $monhoc = $ct->MonHoc;
+                            echo "<br>";
+                            echo $ct->MonHoc;
+                            echo ' Lớp ' . $ct->Lop;
+
+                        } else {
+                            echo ' ' . $ct->Lop;
+                        }
                     }
                 }
                 ?></td>
@@ -68,8 +76,8 @@
                 buttons: [
                     'copy', 'csv', 'excel', 'pdf', 'print'
                 ],
-                scrollY:        "1000px",
-                scrollX:        true,
+                scrollY: "1000px",
+                scrollX: true,
                 scrollCollapse: true,
                 scroller: {
                     rowHeight: "30px"

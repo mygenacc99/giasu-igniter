@@ -78,7 +78,7 @@
                  $rs = $query->result();
                  foreach ($rs as $monhoc){
                      ?>
-                <input class="form-check-input" type="checkbox" value=<?php echo $monhoc->MonHoc?> id=<?php echo $monhoc->MonHoc?> name="Mon[]">
+                <input class="form-check-input" type="checkbox" value="<?php echo $monhoc->MonHoc?>" id=<?php echo $monhoc->MonHoc?> name="Mon[]">
                 <label class="form-check-label" for=<?php echo $monhoc->MonHoc?> ><?php echo $monhoc->MonHoc?></label>
                 <?php
                  }
