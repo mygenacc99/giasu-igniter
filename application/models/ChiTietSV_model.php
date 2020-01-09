@@ -1,6 +1,6 @@
 <?php
 
-class KVGS_model extends CI_Model
+class ChiTietSV_model extends CI_Model
 {
     public $table = '';
     public $key = '';
@@ -8,8 +8,8 @@ class KVGS_model extends CI_Model
     function __construct()
     {
         parent::__construct();
-        $this->table = 'KHUVUCGIASU';
-        $this->key = 'MaGiaSu';
+        $this->table = 'CHITIETSINHVIEN';
+        $this->key = 'MaSV';
     }
 
     function create($data = array())

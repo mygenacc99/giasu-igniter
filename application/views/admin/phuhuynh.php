@@ -9,6 +9,8 @@
         <th scope="col">Ngày Đăng ký</th>
         <th scope="col">Trạng thái</th>
         <th scope="col">Khu vực</th>
+        <th scope="col">Môn học</th>
+        <th scope="col">Duyệt</th>
     </tr>
     </thead>
     <tbody>
@@ -16,6 +18,9 @@
     <?php
 
     foreach ($phuhuynh as $ph) {
+        if ($ph->TrangThai == 'chua duyet'){
+
+
         ?>
         <tr>
             <th scope="row"><?php echo $ph->MaPH?></th>
@@ -40,32 +45,18 @@
                 }
                 ?>
             </td>
+            <td><?php foreach ($nhucau as $mon){
+                if ($ph->MaPH == $mon->MaPH){
+                    echo $mon->MonHoc.' lớp '.$mon->Lop.'<br>';
+                }
+                }?>
+            </td>
+            <td><a href="<?php echo admin_url('phuhuynh/duyet/').$ph->MaPH ?>">Duyệt</a></td>
 
-<!--            <td>--><?php
-//                foreach ($ctgs as $ct) {
-//                    if ($gs->MaGiaSu === $ct->MaGiaSu) {
-//                        echo $ct->MonHoc . ' Lớp  ' . $ct->Lop;
-//                        echo "<br>";
-//                    }
-//                }
-//                ?><!--</td>-->
-<!--            <td>-->
-<!--                --><?php
-//                $sql = "select kv.MaGiaSu, CONCAT(qh.Ten,'-', tp.Ten) as DiaChi
-//                    from KHUVUCGIASU kv, QUANHUYEN qh, THANHPHO tp
-//                    where kv.MaQH = qh.MaQH and qh.MaTp = tp.MaTP and kv.MaGiaSu=$gs->MaGiaSu;";
-//                $query = $this->db->query($sql);
-//                //                echo var_dump($sql);
-//                $data = $query->result();
-//                foreach ($data as $dc) {
-//                    echo $dc->DiaChi;
-//                    echo "<br>";
-//                }
-//                ?>
-<!--            </td>-->
+
         </tr>
         <?php
-    }
+    }}
     ?>
 
     </tbody>

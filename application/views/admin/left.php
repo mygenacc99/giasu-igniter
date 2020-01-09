@@ -1,20 +1,36 @@
 <div class="container" style="padding-left: 0.1%; padding-top: 3rem">
     <nav>
         <ul class="mcd-menu">
+
+
             <li>
-                <a href="phuhuynh">
-                    <i class="fa fa-newspaper-o"></i>
-                    <strong>Phụ huynh</strong>
-                </a>
-            </li>
-            <li>
-                <a href="giasu">
+                <a href="<?php echo admin_url('giasu')?>">
                     <i class="fa fa-home fa-3x"></i>
                     <strong>Gia sư</strong>
                 </a>
             </li>
+            <li>
+                <a href="<?php echo admin_url('phuhuynh')?>">
+                    <i class="fa fa-newspaper-o"></i>
+                    <strong>Phụ huynh</strong>
 
-           
+                </a>
+            </li>
+            <li>
+                <a href="<?php echo admin_url('phuhuynh/lichsu')?>">
+                    <i class="fa fa-newspaper-o"></i>
+                    <strong>Lịch sử</strong>
+
+                </a>
+            </li>
+            <li>
+                <a href="<?php echo admin_url('phanhoi')?>">
+                    <i class="fa fa-newspaper-o"></i>
+                    <strong>Phản hồi</strong>
+
+                </a>
+            </li>
+        </ul>
     </nav>
 </div>
 <style>

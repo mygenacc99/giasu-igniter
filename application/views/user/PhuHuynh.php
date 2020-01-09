@@ -15,6 +15,7 @@
     <div class="form-group">
         <label for="ThanhPho">Chọn thành phố bạn đang sống</label>
         <select class="form-control form-control-lg thanh-pho" name="ThanhPho">
+            <option value=48 selected="selected">Đà Nẵng</option>
             <?php
             $data = $this->db->get("THANHPHO");
             $data = $data->result();
@@ -49,7 +50,7 @@
                 $rs = $query->result();
                 foreach ($rs as $monhoc){
                     ?>
-                    <input class="form-check-input" type="checkbox" value=<?php echo $monhoc->MonHoc?> id=<?php echo $monhoc->MonHoc?> name="Mon[]">
+                    <input class="form-check-input" type="checkbox" value='<?php echo $monhoc->MaMH?>' id=<?php echo $monhoc->MonHoc?> name="Mon[]">
                     <label class="form-check-label" for=<?php echo $monhoc->MonHoc?> ><?php echo $monhoc->MonHoc?></label>
                     <?php
                 }
@@ -58,6 +59,21 @@
         </div>
     </div>
 
+
+    <div class="form-group">
+        <label for="Buoi">Số buổi học có thể trên tuần</label>
+        <select class="form-control form-control-lg lop" name="Buoi">
+
+            <?php
+            for($i = 2; $i<=6; $i++){
+                ?>
+                <option value=<?php echo $i?>><?php echo $i?></option>
+                <?php
+            }
+            ?>
+        </select>
+
+    </div>
 
     <div class="form-group">
         <label for="lop">Đang học lớp</label>

@@ -5,8 +5,8 @@ class Giasu extends CI_Controller
     function __construct()
     {
         parent::__construct();
-        $this->load->model('giasu_model');
-        $this->load->model("ChiTietGS_model");
+        $this->load->model('SinhVien_model');
+        $this->load->model("ChiTietSV_model");
     }
 
     function index()
@@ -17,7 +17,13 @@ class Giasu extends CI_Controller
         $data['temp']="admin/giasu";
         $this->load->view('admin/index', $data);
     }
-
+    function delete()
+    {
+        $id = $this->uri->segment(4);
+        if($this->giasu_model->delete($id)){
+            redirect(admin_url('giasu'));
+        }
+    }
 }
 
 ?>

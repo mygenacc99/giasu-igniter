@@ -13,6 +13,7 @@
         <th scope="col">Ngày Đăng ký</th>
         <th scope="col">Môn dạy</th>
         <th scope="col">Nơi dạy</th>
+        <th scope="col">Xóa</th>
     </tr>
     </thead>
     <tbody>
@@ -62,6 +63,8 @@
                 }
                 ?>
             </td>
+            <td><a href="<?php echo admin_url('giasu/delete/').$gs->MaGiaSu ?>">Xóa</a></td>
+
         </tr>
         <?php
     }

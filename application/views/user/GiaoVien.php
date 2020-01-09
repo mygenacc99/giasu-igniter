@@ -1,16 +1,7 @@
 <form method="post" style="font-size: 30px!important;" class="formdangky">
 
     <div class="form-group">
-        <label for="NgheNghiep">Vui lòng chọn nghề nghiệp hiện tại</label>
-        <select class="form-control form-control-lg nghe-nghiep" name="NgheNghiep">
-            <option>Sinh viên</option>
-            <option>Giáo viên</option>
-        </select>
-    </div>
-
-
-    <div class="form-group">
-        <label for="HoTen">Họ tên</label>
+        <label for="HoTen">Họ và tên thầy/cô</label>
         <input type="text" class="form-control form-control-lg" name="HoTen" placeholder="Họ và tên">
     </div>
 
@@ -21,8 +12,6 @@
             <option>Nữ</option>
         </select>
     </div>
-
-
 
     <div class="form-group">
         <label for="SDT">Số điện thoại</label>
@@ -35,15 +24,11 @@
                placeholder="Enter email">
     </div>
 
-    <div class="form-group">
-        <label for="Facebook">Facebook (Coppy link và paste)</label>
-        <input type="text" class="form-control form-control-lg" name="Facebook" placeholder="Facebook">
-    </div>
-
 
     <div class="form-group">
         <label for="ThanhPho">Chọn thành phố bạn đang sống</label>
         <select class="form-control form-control-lg thanh-pho" name="ThanhPho">
+            <option value=48 selected="selected">Đà Nẵng</option>
             <?php
             $data = $this->db->get("THANHPHO");
             $data = $data->result();
@@ -57,7 +42,7 @@
     </div>
 
     <div class="form-group">
-        <label for="DiaChi">Chọn các khu vực bạn có thể dạy</label>
+        <label for="DiaChi">Chọn các khu vực thầy/cô có thể dạy</label>
         <div class="quan-huyen">
         </div>
     </div>
@@ -68,20 +53,30 @@
         <input type="text" class="form-control form-control-lg" name="DiaChi" placeholder="Địa chỉ">
     </div>
 
+    <div class="form-group">
+        <label for="DiaChi">Trường thầy/cô đang dạy</label>
+        <input type="text" class="form-control form-control-lg" name="Truong" placeholder="Địa chỉ">
+    </div>
 
     <div class="form-group">
-        <label for="MonHoc">Chọn môn bạn có thể dạy</label>
+        <label for="DiaChi">Thầy/cô đang dạy môn nào ở trường</label>
+        <input type="text" class="form-control form-control-lg" name="ChuyenNganh" placeholder="Địa chỉ">
+    </div>
+
+
+    <div class="form-group">
+        <label for="MonHoc">Chọn môn thầy/cô có thể dạy</label>
         <div class="MonHoc">
             <div class="form-check form-check-inline">
                 <?php
-                 $query = $this->db->get("MONHOC");
-                 $rs = $query->result();
-                 foreach ($rs as $monhoc){
-                     ?>
-                <input class="form-check-input" type="checkbox" value="<?php echo $monhoc->MonHoc?>" id=<?php echo $monhoc->MonHoc?> name="Mon[]">
-                <label class="form-check-label" for=<?php echo $monhoc->MonHoc?> ><?php echo $monhoc->MonHoc?></label>
-                <?php
-                 }
+                $query = $this->db->get("MONHOC");
+                $rs = $query->result();
+                foreach ($rs as $monhoc){
+                    ?>
+                    <input class="form-check-input" type="checkbox" value="<?php echo $monhoc->MaMH?>" id=<?php echo $monhoc->MonHoc?> name="Mon[]">
+                    <label class="form-check-label" for=<?php echo $monhoc->MonHoc?> ><?php echo $monhoc->MonHoc?></label>
+                    <?php
+                }
                 ?>
             </div>
         </div>
@@ -89,7 +84,7 @@
 
 
     <div class="form-group">
-        <label for="Lop">Chọn lớp bạn có thể dạy</label>
+        <label for="Lop">Chọn lớp thầy/cô có thể dạy</label>
         <div class="Lop">
             <div class="form-check form-check-inline">
                 <?php
@@ -107,7 +102,7 @@
 
 
     <div class="form-group">
-        <label for="GioiThieu">Bạn có thể giới thiệu một chút về bản thân:</label>
+        <label for="GioiThieu"> thầy/cô có thể giới thiệu một chút về bản thân:</label>
         <textarea class="form-control" name="GioiThieu" id="GioiThieu" rows="3"></textarea>
     </div>
 

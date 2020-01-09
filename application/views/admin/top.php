@@ -4,8 +4,11 @@
             <div class="container-fluid ">
                 <div class="header_bottom_border">
                     <div class="row align-items-center">
+                        <a href="<?php echo user_url('home')?>">
+                            <font color="red"><i class="fa fa-newspaper-o fa-3x"></i></font>
+                        </a>
                         <?php if($this->session->userdata('user')){?>
-                            <div class="main-menu  d-none d-lg-block" style="padding-left: 0%; ">
+                            <div class="main-menu  d-none d-lg-block" style="padding-left: 90%; ">
                                 <nav>
                                     <ul id="navigation">
                                         <li><a href="#"><?php echo $this->session->userdata('user'); ?> </a>
@@ -29,6 +32,7 @@
                                 </div>
                             </div>
                         <?php }?>
+
                 </div>
                         <div class="col-12">
                             <div class="mobile_menu d-block d-lg-none"></div>

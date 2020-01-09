@@ -1,6 +1,6 @@
 <?php
 
-class Giasu_model extends CI_Model
+class KVSV_model extends CI_Model
 {
     public $table = '';
     public $key = '';
@@ -8,8 +8,8 @@ class Giasu_model extends CI_Model
     function __construct()
     {
         parent::__construct();
-        $this->table = 'GIASU';
-        $this->key = 'MaGiaSu';
+        $this->table = 'KHUVUCSINHVIEN';
+        $this->key = 'MaSV';
     }
 
     function create($data = array())

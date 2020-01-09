@@ -1,6 +1,6 @@
 <?php
 
-class ChiTietGS_model extends CI_Model
+class ChiTietGV_model extends CI_Model
 {
     public $table = '';
     public $key = '';
@@ -8,8 +8,8 @@ class ChiTietGS_model extends CI_Model
     function __construct()
     {
         parent::__construct();
-        $this->table = 'CHITIETGIASU';
-        $this->key = 'MaGiaSu';
+        $this->table = 'CHITIETGIAOVIEN';
+        $this->key = 'MaGV';
     }
 
     function create($data = array())

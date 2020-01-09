@@ -1,3 +1,5 @@
+create schema GIASU;
+
 use GIASU;
 
 
@@ -809,36 +811,74 @@ INSERT INTO `QUANHUYEN` VALUES ('971', 'Huyện Năm Căn', 'Huyện', '96');
 INSERT INTO `QUANHUYEN` VALUES ('972', 'Huyện Phú Tân', 'Huyện', '96');
 INSERT INTO `QUANHUYEN` VALUES ('973', 'Huyện Ngọc Hiển', 'Huyện', '96');
 
-CREATE TABLE GIASU(
-  MaGiaSu int auto_increment,
-  HoTen nvarchar(50),
-  GioiTinh nvarchar(50),
+
+
+CREATE TABLE SINHVIEN(
+  MaSV int auto_increment,
+  HoTen varchar(255),
+  GioiTinh varchar(50),
+  SDT varchar(50),
+  Email varchar(50),
+  Facebook nvarchar(50),
+  Truong varchar(255),
+  ChuyenNganh varchar(255),
+  DiaChi nvarchar(50),
+  GioiThieu text,
+  NgayDangKy datetime,
+  primary key (MaSV)
+);
+ALTER TABLE SINHVIEN AUTO_INCREMENT=2000;
+
+
+CREATE TABLE GIAOVIEN(
+  MaGV int auto_increment,
+  HoTen varchar(255),
+  GioiTinh varchar(50),
   SDT nvarchar(50),
   Email nvarchar(50),
-  Facebook nvarchar(50),
+  Truong varchar(255),
+  ChuyenNganh varchar(255),
   DiaChi nvarchar(50),
-  NgheNghiep nvarchar(50),
   GioiThieu text,
-  NgayDangKy date, 
-  primary key (MaGiaSu)
+  NgayDangKy datetime,
+  primary key (MaGV)
 );
+ALTER TABLE GIAOVIEN AUTO_INCREMENT=301;
+
+
 
 CREATE TABLE MONHOC(
-    MonHoc nvarchar(50) primary key
+    MaMH int auto_increment,
+    MonHoc nvarchar(50),
+    primary key (MaMH)
 );
 
-CREATE TABLE CHITIETGIASU(
-  MaGiaSu int,
-  MonHoc nvarchar(50,
+CREATE TABLE CHITIETGIAOVIEN(
+  MaGV int,
+  MaMH int,
   Lop int,
-primary key ( MaGiaSu, MonHoc,Lop)
+primary key ( MaGV, MaMH, Lop)
 );
 
 
-CREATE TABLE KHUVUCGIASU(
-  MaGiaSu int,
+CREATE TABLE CHITIETSINHVIEN(
+  MaSV int,
+  MaMH int,
+  Lop int,
+primary key ( MaSV, MaMH, Lop)
+);
+
+
+CREATE TABLE KHUVUCSINHVIEN(
+  MaSV int,
   MaQH int,
-  primary key(MaGiaSu, MaQH)
+  primary key(MaSV, MaQH)
+);
+
+CREATE TABLE KHUVUCGIAOVIEN(
+  MaGV int,
+  MaQH int,
+  primary key(MaGV, MaQH)
 );
 
 CREATE TABLE PHUHUYNH(
@@ -847,17 +887,20 @@ CREATE TABLE PHUHUYNH(
   SDT nvarchar(50),
   MaKV nvarchar(50),
   DiaChi nvarchar(50),
+  Buoi int,
   GhiChu nvarchar(50),
-  NgayDangKy date,
+  NgayDangKy datetime,
   TrangThai nvarchar(50),
   primary key (MaPH)
 );
+ALTER TABLE PHUHUYNH AUTO_INCREMENT=4000;
+
 
 CREATE TABLE NHUCAU(
   MaPH int,
-  MonHoc nvarchar(50),
+  MaMH int,
   Lop int,
-  primary key (MaPH, MonHoc, Lop)
+  primary key (MaPH, MaMH, Lop)
 );
 
 CREATE TABLE USER(
@@ -866,3 +909,21 @@ CREATE TABLE USER(
   Password nvarchar(50),
   primary key (ID)
 );
+CREATE TABLE PHANHOI(
+ID int auto_increment,
+Email nvarchar(50),
+NoiDung nvarchar(50),
+primary key (ID)
+);
+
+
+INSERT INTO `GIASU`.`MONHOC` (`MaMH`, `MonHoc`) VALUES ('1', 'GDCD');
+INSERT INTO `GIASU`.`MONHOC` (`MaMH`, `MonHoc`) VALUES ('2', 'Hóa học');
+INSERT INTO `GIASU`.`MONHOC` (`MaMH`, `MonHoc`) VALUES ('3', 'Lịch sử');
+INSERT INTO `GIASU`.`MONHOC` (`MaMH`, `MonHoc`) VALUES ('4', 'Sinh học');
+INSERT INTO `GIASU`.`MONHOC` (`MaMH`, `MonHoc`) VALUES ('5', 'Tiếng Anh');
+INSERT INTO `GIASU`.`MONHOC` (`MaMH`, `MonHoc`) VALUES ('6', 'Tin học');
+INSERT INTO `GIASU`.`MONHOC` (`MaMH`, `MonHoc`) VALUES ('7', 'Toán');
+INSERT INTO `GIASU`.`MONHOC` (`MaMH`, `MonHoc`) VALUES ('8', 'Văn học');
+INSERT INTO `GIASU`.`MONHOC` (`MaMH`, `MonHoc`) VALUES ('9', 'Vật lý');
+INSERT INTO `GIASU`.`MONHOC` (`MaMH`, `MonHoc`) VALUES ('10', 'Địa lý');
