@@ -162,7 +162,7 @@ class Home extends CI_Controller
             $Lop = $this->input->post('Lop');
             $Mon = $this->input->post('Mon');
             $Buoi = $this->input->post('Buoi');
-            $trangthai = 'chua duyet';
+            $trangthai = 'Chưa duyệt';
 
 
             $Ngay = date("y/m/d H:i:s");
@@ -176,7 +176,9 @@ class Home extends CI_Controller
                 'NgayDangKy' => $Ngay,
                 'MaKV' => $QuanHuyen,
                 'TrangThai' => $trangthai,
-                'Buoi' => $Buoi
+                'Buoi' => $Buoi,
+                'Lop' => $Lop
+
 
             );
             $this->phuhuynh_model->create($ph);
@@ -185,8 +187,7 @@ class Home extends CI_Controller
             foreach ($Mon as $mon) {
                 $ct = array(
                     'MaPH' => $MaPH,
-                    'MaMH' => $mon,
-                    'Lop' => $Lop
+                    'MaMH' => $mon
                 );
                 $this->nhucau_model->create($ct);
 

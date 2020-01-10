@@ -45,5 +45,4 @@
 
 
     <!--    <script src="--><?php //echo public_url()?><!--js/main.js"></script>-->
-    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
 </head>

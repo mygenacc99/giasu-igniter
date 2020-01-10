@@ -21,7 +21,7 @@
                                         </li>
                                         <li class="ti-angle-down"><a href="<?php echo user_url('home/giaovien')?>">Giáo Viên</a>
                                         </li>
-                                        <li><a href="<?php echo user_url('home/phuhuynh')?>">Phụ huynh/hs</a>
+                                        <li><a href="<?php echo user_url('home/phuhuynh')?>">Phụ huynh/Học sinh</a>
                                         </li>
                                         <li><a href="<?php echo user_url('home/phanhoi') ?>">Phản hồi</a>
                                         </li>

@@ -1,4 +1,3 @@
-
 <table class="table table-light" id="table">
     <thead class="thead-dark">
     <tr>
@@ -10,14 +9,26 @@
         <th scope="col">Ngày Đăng ký</th>
         <th scope="col">Trạng thái</th>
         <th scope="col">Khu vực</th>
+        <th scope="col">Môn học</th>
+        <th scope="col">Lớp</th>
+        <th scope="col">Số buổi</th>
+
+
+        <th scope="col"></th>
     </tr>
     </thead>
     <tbody>
 
     <?php
+    $monhocMap = array();
+    $query = $this->db->query('SELECT * FROM MONHOC');
+    $monhocArr = $query->result();
+    foreach ($monhocArr as $mon){
+        $monhocMap[$mon->MaMH] = $mon->MonHoc;
+    }
 
     foreach ($phuhuynh as $ph) {
-        if ($ph->TrangThai === 'Đã hoàn thành'){
+        if ($ph->TrangThai === 'Chưa hoàn thành'){
 
 
             ?>
@@ -44,6 +55,19 @@
                     }
                     ?>
                 </td>
+                <td><?php foreach ($nhucau as $mon){
+                        if ($ph->MaPH == $mon->MaPH){
+                            echo $monhocMap[$mon->MaMH].'<br>';
+                        }
+                    }?>
+                </td>
+                <td><?php
+                    echo $ph->Lop.'<br>';
+                    ?>
+                </td>
+                <td><?php echo $ph->Buoi ?></td>
+
+                <td><a href="<?php echo admin_url('phuhuynh/xet/').$ph->MaPH ?>">Xét</a></td>
 
             </tr>
             <?php
@@ -58,8 +82,7 @@
                 dom: 'Bfrtip',
                 buttons: [
                     'copy', 'csv', 'excel', 'pdf', 'print'
-                ],
-                "order": [[ 4, "desc" ]],
+                ]
             });
         });
     </script>

@@ -1,10 +1,5 @@
 <?php
-if ($this->session->userdata('user')){
-    if($this->session->userdata('isadmin') == 0){
-        redirect(admin_url('home'));
-    }
-}
-else{
+if (!$this->session->userdata('user')){
     redirect(admin_url('login'));
 }
 ?>

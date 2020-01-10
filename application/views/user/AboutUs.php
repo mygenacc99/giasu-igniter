@@ -50,16 +50,7 @@
                     CÁC&nbsp;<strong><font class="Apple-style-span">LỚP</font></strong>&nbsp;MỚI
                     NHẤT</font></strong></font></h1>
     <div class="clearb"></div>
-    <div class="mxh clearfix">
-        <div style="float: left; margin-left: 20px;">
-            <iframe src="//www.facebook.com/plugins/like.php?href=https://giasunhanvan.com/&amp;send=false&amp;layout=button_count&amp;width=80&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font=arial&amp;height=21" scrolling="no" frameborder="0" style="border: none; overflow: hidden; width: 80px; height: 21px;" allowtransparency="true"></iframe>
-            <div id="___plusone_0" style="position: absolute; width: 450px; left: -10000px;">
-                <iframe ng-non-bindable="" frameborder="0" hspace="0" marginheight="0" marginwidth="0" scrolling="no" style="position:absolute;top:-10000px;width:450px;margin:0px;border-style:none" tabindex="0" vspace="0" width="100%" id="I0_1578451368203" name="I0_1578451368203" src="https://apis.google.com/se/0/_/+1/fastbutton?usegapi=1&amp;size=medium&amp;origin=https%3A%2F%2Fgiasunhanvan.com&amp;url=https%3A%2F%2Fgiasunhanvan.com%2F&amp;gsrc=3p&amp;ic=1&amp;jsh=m%3B%2F_%2Fscs%2Fapps-static%2F_%2Fjs%2Fk%3Doz.gapi.en_US.sMn3oj1Y3cA.O%2Fam%3DgQc%2Fd%3D1%2Fct%3Dzgms%2Frs%3DAGLTcCPqBV3I8WSHGVZdFwzpG63NJd9nNw%2Fm%3D__features__#_methods=onPlusOne%2C_ready%2C_close%2C_open%2C_resizeMe%2C_renderstart%2Concircled%2Cdrefresh%2Cerefresh&amp;id=I0_1578451368203&amp;_gfid=I0_1578451368203&amp;parent=https%3A%2F%2Fgiasunhanvan.com&amp;pfname=&amp;rpctoken=37943923" data-gapiattached="true"></iframe>
-            </div>
-            <g:plusone size="medium" href="https://giasunhanvan.com/" data-gapiscan="true" data-onload="true" data-gapistub="true"></g:plusone>
 
-        </div>
-    </div>
     <hr>
     <p><font size="3"><font color="#FF0000"><strong>Trung tâm gia sư</strong></font></font></p>
     <p><font size="3">VP : Đà Nẵng</font></p>

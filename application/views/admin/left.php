@@ -1,43 +1,48 @@
-<div class="container" style="padding-left: 0.1%; padding-top: 3rem">
-    <nav>
-        <ul class="mcd-menu">
+<nav style="padding-left: 0.1%; padding-top: 3rem;z-index: 99999;">
+    <ul class="mcd-menu">
 
+        <li>
+            <a href="<?php echo admin_url('phuhuynh') ?>">
+                <i class="fa fa-user-circle"></i>
+                <strong>Phụ huynh</strong>
+            </a>
+            <ul>
+                <li><a href="<?php echo admin_url('phuhuynh/lichsu') ?>"><i class="fa fa-edit"></i>Đã hoàn thành</a>
+                </li>
+                <li><a href="<?php echo admin_url('phuhuynh/choduyet') ?>"><i class="fa fa-list"></i>Chưa hoàn thành</a>
+                </li>
 
-            <li>
-                <a href="<?php echo admin_url('giasu')?>">
-                    <i class="fa fa-home fa-3x"></i>
-                    <strong>Gia sư</strong>
-                </a>
-            </li>
-            <li>
-                <a href="<?php echo admin_url('phuhuynh')?>">
-                    <i class="fa fa-newspaper-o"></i>
-                    <strong>Phụ huynh</strong>
+            </ul>
+        </li>
+        <li>
+            <a href="<?php echo admin_url('giasu/SinhVien') ?>">
+                <i class="fa fa-user"></i>
+                <strong>Sinh Viên</strong>
+            </a>
+        </li>
+        <li>
+            <a href="<?php echo admin_url('giasu/GiaoVien') ?>">
+                <i class="fa fa-user-circle-o"></i>
+                <strong>Giáo Viên</strong>
+            </a>
+        </li>
 
-                </a>
-            </li>
-            <li>
-                <a href="<?php echo admin_url('phuhuynh/lichsu')?>">
-                    <i class="fa fa-newspaper-o"></i>
-                    <strong>Lịch sử</strong>
+        <li>
+            <a href="<?php echo admin_url('phanhoi') ?>">
+                <i class="fa fa-newspaper-o"></i>
+                <strong>Phản hồi</strong>
 
-                </a>
-            </li>
-            <li>
-                <a href="<?php echo admin_url('phanhoi')?>">
-                    <i class="fa fa-newspaper-o"></i>
-                    <strong>Phản hồi</strong>
+            </a>
+        </li>
+    </ul>
+</nav>
 
-                </a>
-            </li>
-        </ul>
-    </nav>
-</div>
 <style>
     body {
         background: #EEE;
-        overflow-x:hidden;
+        overflow-x: hidden;
     }
+
     .clearfix:before,
     .clearfix:after {
         content: " ";
@@ -47,6 +52,7 @@
     .clearfix:after {
         clear: both;
     }
+
     .clearfix {
         *zoom: 1;
     }
@@ -57,6 +63,7 @@
         padding: 50px 0;
         clear: both;
     }
+
     @media only screen and (min-width: 1200px) {
         .container {
             width: 1210px;
@@ -90,7 +97,6 @@
     }
 
 
-
     .mcd-menu {
         list-style: none;
         padding: 0;
@@ -105,10 +111,12 @@
         width: 250px;
         /* == */
     }
+
     .mcd-menu li {
         position: relative;
         /*float:left;*/
     }
+
     .mcd-menu li a {
         display: block;
         text-decoration: none;
@@ -124,6 +132,7 @@
         border-bottom: 1px solid #EEE;
         /* == */
     }
+
     .mcd-menu li a i {
         /*display: block;
         font-size: 30px;
@@ -136,17 +145,20 @@
         /* == */
 
     }
+
     /* == */
     .mcd-menu li a p {
         float: left;
-        margin: 0 ;
+        margin: 0;
     }
+
     /* == */
 
     .mcd-menu li a strong {
         display: block;
         text-transform: uppercase;
     }
+
     .mcd-menu li a small {
         display: block;
         font-size: 10px;
@@ -161,6 +173,7 @@
         -moz-transition: all 300ms linear;
         -webkit-transition: all 300ms linear;
     }
+
     .mcd-menu li:hover > a i {
         opacity: 1;
         -webkit-animation: moveFromTop 300ms ease-in-out;
@@ -169,6 +182,7 @@
         -o-animation: moveFromTop 300ms ease-in-out;
         animation: moveFromTop 300ms ease-in-out;
     }
+
     .mcd-menu li:hover a strong {
         opacity: 1;
         -webkit-animation: moveFromLeft 300ms ease-in-out;
@@ -177,6 +191,7 @@
         -o-animation: moveFromLeft 300ms ease-in-out;
         animation: moveFromLeft 300ms ease-in-out;
     }
+
     .mcd-menu li:hover a small {
         opacity: 1;
         -webkit-animation: moveFromRight 300ms ease-in-out;
@@ -189,10 +204,11 @@
     .mcd-menu li:hover > a {
         color: #e67e22;
     }
+
     .mcd-menu li a.active {
         position: relative;
         color: #e67e22;
-        border:0;
+        border: 0;
         /*border-top: 4px solid #e67e22;
         border-bottom: 4px solid #e67e22;
         margin-top: -4px;*/
@@ -206,6 +222,7 @@
         margin: 0 -4px;
         /* == */
     }
+
     .mcd-menu li a.active:before {
         content: "";
         position: absolute;
@@ -234,6 +251,7 @@
         border-top: 5px solid transparent;
         border-bottom: 5px solid transparent;
     }
+
     /* == */
 
     @-webkit-keyframes moveFromTop {
@@ -254,6 +272,7 @@
             transform: translateY(0%);
         }
     }
+
     @-webkit-keyframes moveFromLeft {
         from {
             opacity: 0;
@@ -272,6 +291,7 @@
             transform: translateX(0%);
         }
     }
+
     @-webkit-keyframes moveFromRight {
         from {
             opacity: 0;
@@ -290,7 +310,6 @@
             transform: translateX(0%);
         }
     }
-
 
 
     .mcd-menu li ul,
@@ -313,11 +332,12 @@
         z-index: 1000;
 
         /* == */
-        left:280px;
+        left: 280px;
         top: 0px;
         border-left: 4px solid #e67e22;
         /* == */
     }
+
     .mcd-menu li ul:before {
         content: "";
         position: absolute;
@@ -335,6 +355,7 @@
         border-top: 5px solid transparent;
         /* == */
     }
+
     .mcd-menu li:hover > ul,
     .mcd-menu li ul li:hover > ul {
         display: block;
@@ -343,9 +364,10 @@
         /*top: 100px;*/
 
         /* == */
-        left:250px;
+        left: 250px;
         /* == */
     }
+
     /*.mcd-menu li ul li {
       float: none;
     }*/
@@ -359,17 +381,20 @@
         height: auto;
         /* == */
     }
+
     .mcd-menu li ul li a i {
         font-size: 16px;
         display: inline-block;
         margin: 0 10px 0 0;
     }
+
     .mcd-menu li ul li ul {
         left: 230px;
         top: 0;
         border: 0;
         border-left: 4px solid #e67e22;
     }
+
     .mcd-menu li ul li ul:before {
         content: "";
         position: absolute;
@@ -382,11 +407,11 @@
         border-bottom: 5px solid transparent;
         border-top: 5px solid transparent;
     }
+
     .mcd-menu li ul li:hover > ul {
         top: 0px;
         left: 200px;
     }
-
 
 
     /*.mcd-menu li.float {
@@ -397,11 +422,13 @@
         padding: 10px 10px 15px 10px;
         clear: both;
     }
+
     .mcd-menu li a.search i {
         margin: 0;
         display: inline-block;
         font-size: 18px;
     }
+
     .mcd-menu li a.search input {
         border: 1px solid #EEE;
         padding: 10px;
@@ -410,10 +437,11 @@
         color: #777;
 
         /* == */
-        width:170px;
-        float:left;
+        width: 170px;
+        float: left;
         /* == */
     }
+
     .mcd-menu li a.search button {
         border: 1px solid #e67e22;
         /*padding: 10px;*/
@@ -423,30 +451,32 @@
         margin-left: -4px;
 
         /* == */
-        float:left;
+        float: left;
         padding: 10px 10px 11px 10px;
         /* == */
     }
+
     .mcd-menu li a.search input:focus {
         border: 1px solid #e67e22;
     }
 
 
     .search-mobile {
-        display:none !important;
-        background:#e67e22;
-        border-left:1px solid #e67e22;
-        border-radius:0 3px 3px 0;
+        display: none !important;
+        background: #e67e22;
+        border-left: 1px solid #e67e22;
+        border-radius: 0 3px 3px 0;
     }
+
     .search-mobile i {
-        color:#FFF;
-        margin:0 !important;
+        color: #FFF;
+        margin: 0 !important;
     }
 
 
     @media only screen and (min-width: 960px) and (max-width: 1199px) {
         .mcd-menu {
-            margin-left:10px;
+            margin-left: 10px;
         }
     }
 
@@ -454,48 +484,61 @@
         .mcd-menu {
             width: 200px;
         }
+
         .mcd-menu li a {
-            height:30px;
+            height: 30px;
         }
+
         .mcd-menu li a i {
             font-size: 22px;
         }
+
         .mcd-menu li a strong {
             font-size: 12px;
         }
+
         .mcd-menu li a small {
             font-size: 10px;
         }
+
         .mcd-menu li a.search input {
             width: 120px;
             font-size: 12px;
         }
-        .mcd-menu li a.search buton{
+
+        .mcd-menu li a.search buton {
             padding: 8px 10px 9px 10px;
         }
+
         .mcd-menu li > ul {
-            min-width:180px;
+            min-width: 180px;
         }
+
         .mcd-menu li:hover > ul {
-            min-width:180px;
-            left:200px;
+            min-width: 180px;
+            left: 200px;
         }
+
         .mcd-menu li ul li > ul, .mcd-menu li ul li ul li > ul {
-            min-width:150px;
+            min-width: 150px;
         }
+
         .mcd-menu li ul li:hover > ul {
-            left:180px;
-            min-width:150px;
+            left: 180px;
+            min-width: 150px;
         }
+
         .mcd-menu li ul li ul li:hover > ul {
-            left:150px;
-            min-width:150px;
+            left: 150px;
+            min-width: 150px;
         }
+
         .mcd-menu li ul a {
-            font-size:12px;
+            font-size: 12px;
         }
+
         .mcd-menu li ul a i {
-            font-size:14px;
+            font-size: 14px;
         }
     }
 
@@ -504,74 +547,87 @@
         .mcd-menu {
             width: 50px;
         }
+
         .mcd-menu li a {
             position: relative;
             padding: 12px 16px;
-            height:20px;
+            height: 20px;
         }
+
         .mcd-menu li a small {
             display: none;
         }
+
         .mcd-menu li a strong {
             display: none;
         }
-        .mcd-menu li a:hover strong,.mcd-menu li a.active strong {
-            display:block;
-            font-size:10px;
-            padding:3px 0;
-            position:absolute;
-            bottom:0px;
-            left:0;
-            background:#e67e22;
-            color:#FFF;
-            min-width:100%;
-            text-transform:lowercase;
-            font-weight:normal;
-            text-align:center;
+
+        .mcd-menu li a:hover strong, .mcd-menu li a.active strong {
+            display: block;
+            font-size: 10px;
+            padding: 3px 0;
+            position: absolute;
+            bottom: 0px;
+            left: 0;
+            background: #e67e22;
+            color: #FFF;
+            min-width: 100%;
+            text-transform: lowercase;
+            font-weight: normal;
+            text-align: center;
         }
+
         .mcd-menu li .search {
             display: none;
         }
 
         .mcd-menu li > ul {
-            min-width:180px;
-            left:70px;
+            min-width: 180px;
+            left: 70px;
         }
+
         .mcd-menu li:hover > ul {
-            min-width:180px;
-            left:50px;
+            min-width: 180px;
+            left: 50px;
         }
+
         .mcd-menu li ul li > ul, .mcd-menu li ul li ul li > ul {
-            min-width:150px;
+            min-width: 150px;
         }
+
         .mcd-menu li ul li:hover > ul {
-            left:180px;
-            min-width:150px;
+            left: 180px;
+            min-width: 150px;
         }
+
         .mcd-menu li ul li ul li > ul {
-            left:35px;
+            left: 35px;
             top: 45px;
-            border:0;
-            border-top:4px solid #e67e22;
+            border: 0;
+            border-top: 4px solid #e67e22;
         }
+
         .mcd-menu li ul li ul li > ul:before {
-            left:30px;
+            left: 30px;
             top: -9px;
-            border:0;
-            border-bottom:5px solid #e67e22;
-            border-left:5px solid transparent;
-            border-right:5px solid transparent;
+            border: 0;
+            border-bottom: 5px solid #e67e22;
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
         }
+
         .mcd-menu li ul li ul li:hover > ul {
-            left:30px;
-            min-width:150px;
+            left: 30px;
+            min-width: 150px;
             top: 35px;
         }
+
         .mcd-menu li ul a {
-            font-size:12px;
+            font-size: 12px;
         }
+
         .mcd-menu li ul a i {
-            font-size:14px;
+            font-size: 14px;
         }
 
     }
@@ -580,74 +636,87 @@
         .mcd-menu {
             width: 50px;
         }
+
         .mcd-menu li a {
             position: relative;
             padding: 12px 16px;
-            height:20px;
+            height: 20px;
         }
+
         .mcd-menu li a small {
             display: none;
         }
+
         .mcd-menu li a strong {
             display: none;
         }
-        .mcd-menu li a:hover strong,.mcd-menu li a.active strong {
-            display:block;
-            font-size:10px;
-            padding:3px 0;
-            position:absolute;
-            bottom:0px;
-            left:0;
-            background:#e67e22;
-            color:#FFF;
-            min-width:100%;
-            text-transform:lowercase;
-            font-weight:normal;
-            text-align:center;
+
+        .mcd-menu li a:hover strong, .mcd-menu li a.active strong {
+            display: block;
+            font-size: 10px;
+            padding: 3px 0;
+            position: absolute;
+            bottom: 0px;
+            left: 0;
+            background: #e67e22;
+            color: #FFF;
+            min-width: 100%;
+            text-transform: lowercase;
+            font-weight: normal;
+            text-align: center;
         }
+
         .mcd-menu li .search {
             display: none;
         }
 
         .mcd-menu li > ul {
-            min-width:180px;
-            left:70px;
+            min-width: 180px;
+            left: 70px;
         }
+
         .mcd-menu li:hover > ul {
-            min-width:180px;
-            left:50px;
+            min-width: 180px;
+            left: 50px;
         }
+
         .mcd-menu li ul li > ul, .mcd-menu li ul li ul li > ul {
-            min-width:150px;
+            min-width: 150px;
         }
+
         .mcd-menu li ul li:hover > ul {
-            left:180px;
-            min-width:150px;
+            left: 180px;
+            min-width: 150px;
         }
+
         .mcd-menu li ul li ul li > ul {
-            left:35px;
+            left: 35px;
             top: 45px;
-            border:0;
-            border-top:4px solid #e67e22;
+            border: 0;
+            border-top: 4px solid #e67e22;
         }
+
         .mcd-menu li ul li ul li > ul:before {
-            left:30px;
+            left: 30px;
             top: -9px;
-            border:0;
-            border-bottom:5px solid #e67e22;
-            border-left:5px solid transparent;
-            border-right:5px solid transparent;
+            border: 0;
+            border-bottom: 5px solid #e67e22;
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
         }
+
         .mcd-menu li ul li ul li:hover > ul {
-            left:30px;
-            min-width:150px;
+            left: 30px;
+            min-width: 150px;
             top: 35px;
         }
+
         .mcd-menu li ul a {
-            font-size:12px;
+            font-size: 12px;
         }
+
         .mcd-menu li ul a i {
-            font-size:14px;
+            font-size: 14px;
         }
 
     }

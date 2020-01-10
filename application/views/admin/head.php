@@ -10,7 +10,6 @@
      <meta name="description" content="">
      <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
      <meta name="generator" content="Jekyll v3.8.5">
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
      <script src="https://cdn.ckeditor.com/4.13.1/standard/ckeditor.js"></script>
      <meta charset="utf-8">
      <meta http-equiv="x-ua-compatible" content="ie=edge">

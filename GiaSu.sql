@@ -551,7 +551,7 @@ INSERT INTO `QUANHUYEN` VALUES ('614', 'Huyện Kon Rẫy', 'Huyện', '62');
 INSERT INTO `QUANHUYEN` VALUES ('615', 'Huyện Đắk Hà', 'Huyện', '62');
 INSERT INTO `QUANHUYEN` VALUES ('616', 'Huyện Sa Thầy', 'Huyện', '62');
 INSERT INTO `QUANHUYEN` VALUES ('617', 'Huyện Tu Mơ Rông', 'Huyện', '62');
-INSERT INTO `QUANHUYEN` VALUES ('618', 'Huyện Ia H\' Drai', 'Huyện', '62');
+INSERT INTO `QUANHUYEN` VALUES ('618', 'Huyện Ia H Drai', 'Huyện', '62');
 INSERT INTO `QUANHUYEN` VALUES ('622', 'Thành phố Pleiku', 'Thành phố', '64');
 INSERT INTO `QUANHUYEN` VALUES ('623', 'Thị xã An Khê', 'Thị xã', '64');
 INSERT INTO `QUANHUYEN` VALUES ('624', 'Thị xã Ayun Pa', 'Thị xã', '64');
@@ -883,11 +883,12 @@ CREATE TABLE KHUVUCGIAOVIEN(
 
 CREATE TABLE PHUHUYNH(
   MaPH int auto_increment,
-  HoTen nvarchar(50),
+  HoTen nvarchar(50),Lop int,
   SDT nvarchar(50),
   MaKV nvarchar(50),
   DiaChi nvarchar(50),
   Buoi int,
+  Lop int,
   GhiChu nvarchar(50),
   NgayDangKy datetime,
   TrangThai nvarchar(50),
@@ -899,8 +900,7 @@ ALTER TABLE PHUHUYNH AUTO_INCREMENT=4000;
 CREATE TABLE NHUCAU(
   MaPH int,
   MaMH int,
-  Lop int,
-  primary key (MaPH, MaMH, Lop)
+  primary key (MaPH, MaMH)
 );
 
 CREATE TABLE USER(
@@ -916,14 +916,13 @@ NoiDung nvarchar(50),
 primary key (ID)
 );
 
-
-INSERT INTO `GIASU`.`MONHOC` (`MaMH`, `MonHoc`) VALUES ('1', 'GDCD');
-INSERT INTO `GIASU`.`MONHOC` (`MaMH`, `MonHoc`) VALUES ('2', 'Hóa học');
-INSERT INTO `GIASU`.`MONHOC` (`MaMH`, `MonHoc`) VALUES ('3', 'Lịch sử');
+INSERT INTO `GIASU`.`MONHOC` (`MaMH`, `MonHoc`) VALUES ('1', 'Toán học');
+INSERT INTO `GIASU`.`MONHOC` (`MaMH`, `MonHoc`) VALUES ('2', 'Vật lý');
+INSERT INTO `GIASU`.`MONHOC` (`MaMH`, `MonHoc`) VALUES ('3', 'Hóa học');
 INSERT INTO `GIASU`.`MONHOC` (`MaMH`, `MonHoc`) VALUES ('4', 'Sinh học');
-INSERT INTO `GIASU`.`MONHOC` (`MaMH`, `MonHoc`) VALUES ('5', 'Tiếng Anh');
-INSERT INTO `GIASU`.`MONHOC` (`MaMH`, `MonHoc`) VALUES ('6', 'Tin học');
-INSERT INTO `GIASU`.`MONHOC` (`MaMH`, `MonHoc`) VALUES ('7', 'Toán');
-INSERT INTO `GIASU`.`MONHOC` (`MaMH`, `MonHoc`) VALUES ('8', 'Văn học');
-INSERT INTO `GIASU`.`MONHOC` (`MaMH`, `MonHoc`) VALUES ('9', 'Vật lý');
-INSERT INTO `GIASU`.`MONHOC` (`MaMH`, `MonHoc`) VALUES ('10', 'Địa lý');
+INSERT INTO `GIASU`.`MONHOC` (`MaMH`, `MonHoc`) VALUES ('5', 'Tin học');
+INSERT INTO `GIASU`.`MONHOC` (`MaMH`, `MonHoc`) VALUES ('6', 'Văn học');
+INSERT INTO `GIASU`.`MONHOC` (`MaMH`, `MonHoc`) VALUES ('7', 'Lịch sử');
+INSERT INTO `GIASU`.`MONHOC` (`MaMH`, `MonHoc`) VALUES ('8', 'Địa lý');
+INSERT INTO `GIASU`.`MONHOC` (`MaMH`, `MonHoc`) VALUES ('9', 'Tiếng Anh');
+INSERT INTO `GIASU`.`MONHOC` (`MaMH`, `MonHoc`) VALUES ('10', 'GDCD');

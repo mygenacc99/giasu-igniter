@@ -92,7 +92,7 @@
 
 
     <div class="form-group">
-        <label for="GioiThieu" >Phụ huynh có yêu cầu gì đặc biệt?</label>
+        <label for="GioiThieu" >Phụ huynh/Học sinh có yêu cầu gì đặc biệt?</label>
         <textarea class="form-control" id="GioiThieu" rows="3" name="GioiThieu"></textarea>
     </div>
 

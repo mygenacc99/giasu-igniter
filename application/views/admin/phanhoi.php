@@ -1,10 +1,5 @@
-<div class="container">
-    <div class="col-md-4">
-        <h1 class="text-md-center"> User </h1>
-        <p><font color="#228b22"><?php echo $this->session->flashdata('mess');?></font></p>
-    </div>
-    <div class="clearfix"></div>
-    <table class="table table-bordered">
+
+    <table class="table table-bordered  col-10">
         <tbody><tr class="bg-info">
             <td>ID</td>
             <td>Email</td>
@@ -23,4 +18,3 @@
         <?php } ?>
         </tbody>
     </table>
-</div>

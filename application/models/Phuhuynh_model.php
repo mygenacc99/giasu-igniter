@@ -61,7 +61,7 @@ class Phuhuynh_model extends CI_Model {
     }
     public function get_list()
     {
-        $query = $this->db->get($this->table);
+        $query = $this->db->query('select * from PHUHUYNH order by NgayDangKy desc');
         return $query->result();
     }
 
