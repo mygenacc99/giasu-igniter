@@ -141,6 +141,7 @@ $ph = $phuhuynh[0];
             });
 
             if (dsMon.length !== 0) {
+                $('.giasu').DataTable().clear().destroy();
                 getGS();
             } else {
                 $('.giasu').DataTable().clear().destroy();
@@ -179,7 +180,6 @@ $ph = $phuhuynh[0];
                     "order": [[0, "asc"]]
                 });
 
-                console.log(giaovien);
 
                 giaovien.forEach(gv => {
                     gv.MaSV = gv.MaGV;

@@ -26,7 +26,7 @@
 
 
     <div class="form-group">
-        <label for="ThanhPho">Chọn thành phố bạn đang sống</label>
+        <label for="ThanhPho">Chọn thành phố thầy/cô đang sống</label>
         <select class="form-control form-control-lg thanh-pho" name="ThanhPho">
             <option value=48 selected="selected">Đà Nẵng</option>
             <?php
