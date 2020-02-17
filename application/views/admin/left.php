@@ -1,4 +1,4 @@
-<nav style="padding-left: 0.1%; padding-top: 3rem;z-index: 99999;">
+<nav style="padding-left: 0.1%; padding-top: 3rem;z-index: 99999; position: fixed">
     <ul class="mcd-menu">
 
         <li>
